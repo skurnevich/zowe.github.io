@@ -672,11 +672,11 @@ div#components img {
   border: none;
 }
 
-.legalbutton {
+.whitebackground .legalbutton {
   padding: 0;
 }
 
-.legalbutton a {
+.whitebackground .legalbutton a {
   display: block;
   line-height: 5rem;
   width: 7rem;
