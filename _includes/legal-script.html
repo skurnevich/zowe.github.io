@@ -3,7 +3,7 @@
     params = new URLSearchParams(location.search);
     if (params.has('version')) {
         if (params.has('type') && params.get('type') == "cli") {
-            document.getElementById('download_anchor').href =
+            document.getElementById('download_button').href =
                 "post_download.html?version=" + params.get('version') + "&type=" + params.get('type');
             document.getElementById('download_button').onclick = function () {
                 ga && ga('send', 'event', 'download', 'Zowe CLI ' + params.get('version'), 'zowe-cli-package-' +
@@ -16,7 +16,7 @@
             document.getElementById('download_file_message').innerHTML = 'You are downloading zowe-cli-package-' +
                 (params.get('preview') ? 'next-' + params.get('preview') : params.get('version')) + '.zip';
         } else if (params.has('type') && params.get('type') == "cli-plugins") {
-            document.getElementById('download_anchor').href =
+            document.getElementById('download_button').href =
                 "post_download.html?version=" + params.get('version') + "&type=" + params.get('type');
             document.getElementById('download_button').onclick = function () {
                 ga && ga('send', 'event', 'download', 'Zowe CLI Plugins ' + params.get('version'),
@@ -30,7 +30,7 @@
             document.getElementById('download_file_message').innerHTML = 'You are downloading zowe-cli-plugins-' +
                 (params.get('preview') ? 'next-' + params.get('preview') : params.get('version')) + '.zip';
         } else if (params.has('type') && params.get('type') == "smpe") {
-            document.getElementById('download_anchor').href =
+            document.getElementById('download_button').href =
                 "https://docs.zowe.org/stable/user-guide/install-zowe-smpe.html"
             document.getElementById('download_button').onclick = function () {
                 ga && ga('send', 'event', 'download', 'Zowe SMPE ' + params.get('version'), 'zowe-smpe-package-' +
@@ -44,7 +44,7 @@
                 .get('version') + '.zip';
         } else if (params.has('type') && params.get('type') == "containerization") {
             // https://zowe.jfrog.io/artifactory/libs-release-local/org/zowe/1.25.0/zowe-containerization-1.25.0.zip
-            document.getElementById('download_anchor').href =
+            document.getElementById('download_button').href =
                 "https://docs.zowe.org/stable/user-guide/k8s-introduction"
             document.getElementById('download_button').onclick = function () {
                 ga && ga('send', 'event', 'download', 'Zowe Containerization ' + params.get('version'),
@@ -62,7 +62,7 @@
 
             // https://zowe.jfrog.io/ui/native/libs-release-local/org/zowe/pswi/1.24.0-TP  - change to variable
             // https://github.com/zowe/zowe-install-packaging/blob/master/zowe_pswi_tech_prev.md
-            document.getElementById('download_anchor').href =
+            document.getElementById('download_button').href =
                 "https://docs.zowe.org/stable/user-guide/install-zowe-pswi"
             document.getElementById('download_button').onclick = function () {
                 ga && ga('send', 'event', 'download', 'Zowe PSWI ' + params.get('version'), 'zowe-PSWI-' +
@@ -75,7 +75,7 @@
                 .get('version') + '.pax.Z';
         } else if (params.has('type') && params.get('type') == "chat") {
             // https://zowe.jfrog.io/artifactory/libs-release-local/org/zowe/chat/tp1/zowe-chat-tech-preview-1.tar.gz
-            document.getElementById('download_anchor').href =
+            document.getElementById('download_button').href =
                 "https://docs.zowe.org/stable/user-guide/zowe-chat/introduction"
             document.getElementById('download_button').onclick = function () {
                 ga && ga('send', 'event', 'download', 'Zowe Chat ' + params.get('version'),
@@ -87,7 +87,7 @@
             document.getElementById('download_file_message').innerHTML = 'You are downloading zowe-chat-' +
                 params.get('version') + '.tar.gz';
         } else if (params.has('type') && params.get('type') == "python-sdk") {
-            document.getElementById('download_anchor').href = 
+            document.getElementById('download_button').href = 
                 "post_download.html?version=" + params.get('version') + "&type=" + params.get('type');
             document.getElementById('download_button').onclick = function () {
                 ga && ga('send', 'event', 'download', 'Zowe SMPE ' + params.get('version'), 'zowe-python-sdk-' +
@@ -100,7 +100,7 @@
             document.getElementById('download_file_message').innerHTML = 'You are downloading zowe-python-sdk-' +
                 (params.get('preview') ? 'next-' + params.get('preview') : params.get('version')) + '.zip';
         } else if (params.has('type') && params.get('type') == "nodejs-sdk") {
-            document.getElementById('download_anchor').href = 
+            document.getElementById('download_button').href = 
                 "post_download.html?version=" + params.get('version') + "&type=" + params.get('type');
             document.getElementById('download_button').onclick = function () {
                 ga && ga('send', 'event', 'download', 'Zowe SMPE ' + params.get('version'), 'zowe-nodejs-sdk-' +
@@ -113,7 +113,7 @@
             document.getElementById('download_file_message').innerHTML = 'You are downloading zowe-nodejs-sdk-' +
                 (params.get('preview') ? 'next-' + params.get('preview') : params.get('version')) + '.zip';
         } else if (params.has('type') && params.get('type') == "cli-active-development") {
-            document.getElementById('download_anchor').href =
+            document.getElementById('download_button').href =
                 "https://docs.zowe.org/active-development/getting-started/summaryofchanges.html#what-is-active-development"
             document.getElementById('download_button').onclick = function () {
                 ga && ga('send', 'event', 'download', 'Zowe CLI Active Development ' + params.get('version'),
@@ -126,7 +126,7 @@
                 .get(
                     'package') + '.zip';
         } else {
-            document.getElementById('download_anchor').href = "post_download.html?version=" + params.get('version');
+            document.getElementById('download_button').href = "post_download.html?version=" + params.get('version');
             document.getElementById('download_button').onclick = function () {
                 ga && ga('send', 'event', 'download', 'Zowe Binary ' + params.get('version'), 'zowe-' + params.get(
                     'version') + '.pax');
